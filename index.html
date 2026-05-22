@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional tour guide services in Malawi. Explore Lake Malawi, national parks, and cultural sites with experienced local guides.">
+  <title>Tour Guide Malawi | Explore the Warm Heart of Africa</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Terence <span>Walker</span><br>
+        <span>Tour </span> Guide</a>
+      
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link active">Home</a></li>
+          <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section with Parallax -->
+  <section class="hero" id="hero">
+    <div class="hero-content animate-on-scroll">
+      <h1>Discover Malawi</h1>
+      <p>The Warm Heart of Africa awaits you. Lakes, mountains, wildlife, and culture.</p>
+      <a href="destinations.html" class="btn btn-primary">Explore Tours</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Your Trusted Local Guide</h2>
+        <p>Professional, safe, and authentic experiences across Malawi</p>
+      </div>
+      
+      <div class="grid grid-3">
+        <div class="card animate-on-scroll" style="transition-delay: 0.1s">
+          <div class="card-icon">🌍</div>
+          <h3>Local Expertise</h3>
+          <p>Born and raised in Malawi. I know the hidden gems tourists miss and ensure you experience the real culture.</p>
+        </div>
+        <div class="card animate-on-scroll" style="transition-delay: 0.2s">
+          <div class="card-icon">🛡️</div>
+          <h3>Safe & Reliable</h3>
+          <p>Fully licensed guide with vetted transport and partnerships. Your safety and comfort are my priority.</p>
+        </div>
+        <div class="card animate-on-scroll" style="transition-delay: 0.3s">
+          <div class="card-icon">🤝</div>
+          <h3>Personalized Tours</h3>
+          <p>Every tour is tailored to your interests, pace, and budget. Solo, couples, or groups welcome.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Destinations Preview -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Featured Destinations</h2>
+        <p>Handpicked spots you’ll love</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card card-image animate-on-scroll" style="transition-delay: 0.1s">
+          <div class="carousel animate-on-scroll">
+          <div class="carousel-track" id="carousel-track">
+          <div class="carousel-slide">
+          <img src="lake-malawi1.jpeg" alt="Lake Malawi">
+          </div>
+
+          <div class="carousel-slide">
+          <img src="lake-malawi2.jpeg" alt="Lake Malawi">
+          </div>
+          
+          </div>
+          </div>
+
+          <div class="card-body">
+            <h3>Lake Malawi</h3>
+            <p>Crystal clear waters, sandy beaches, and snorkeling with cichlid fish. Perfect for relaxation and water sports.</p>
+            <a href="destinations.html#lake-malawi" class="btn btn-outline">Book Tour</a>
+          </div>
+        </div>
+        
+        <div class="card card-image animate-on-scroll" style="transition-delay: 0.2s">
+          <img src="wildlife1.jpeg" alt="Lilongwe Wildlife">
+          <div class="card-body">
+            <h3>Lilongwe Wildlife Trust</h3>
+            <p>Visit Malawi’s only wildlife sanctuary. Meet rescued animals and learn about conservation efforts.</p>
+            <a href="destinations.html#lilongwe" class="btn btn-outline">Book Tour</a>
+          </div>
+        </div>
+        
+        <div class="card card-image animate-on-scroll" style="transition-delay: 0.3s">
+          <img src="Mulanje mountain.jpeg" alt="Mount Mulanje">
+          <div class="card-body">
+            <h3>Mount Mulanje</h3>
+            <p>Hike the “Island in the Sky” for breathtaking views, waterfalls, and tea plantations.</p>
+            <a href="destinations.html#mulanje" class="btn btn-outline">Book Tour</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: 3rem;">
+        <a href="destinations.html" class="btn btn-primary">View All Destinations</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Carousel -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>What Travelers Say</h2>
+      </div>
+
+      <div class="carousel animate-on-scroll">
+        <div class="carousel-track" id="carousel-track">
+          <div class="carousel-slide">
+            <p class="testimonial-text">“Best decision of our trip. Our guide was knowledgeable, friendly, and made us feel safe everywhere. Lake Malawi was unreal!”</p>
+            <p class="testimonial-author">— pascal & Mark, UK</p>
+          </div>
+          <div class="carousel-slide">
+            <p class="testimonial-text">“We saw parts of Malawi we’d never find on our own. Great value and excellent communication before the trip.”</p>
+            <p class="testimonial-author">— exvin, USA</p>
+          </div>
+          <div class="carousel-slide">
+            <p class="testimonial-text">“Professional and flexible. Adjusted the itinerary for our kids and everyone had a great time.”</p>
+            <p class="testimonial-author">— izulube, South Africa</p>
+          </div>
+        </div>
+        <div class="carousel-controls">
+          <button class="carousel-btn" id="prevBtn" aria-label="Previous testimonial">‹</button>
+          <button class="carousel-btn" id="nextBtn" aria-label="Next testimonial">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <h2>Based in Lilongwe, Malawi</h2>
+        <p>Central location for tours across the country</p>
+      </div>
+      <div class="map-container animate-on-scroll">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96975.4!2d33.7836!3d-13.9833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1921c5b4b0e8b5c7%3A0x3b8b8b8b8b8b8b8b!2sLilongwe%2C%20Malawi!5e0!3m2!1sen!2sus!4v1690000"
+          width="100%" 
+          height="450" 
+          style="border:0; border-radius: 12px;" 
+          allowfullscreen="" 
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Tour Guide</h3>
+          <p>Professional tour guide services across Malawi since 2018. Licensed, insured, and passionate about sharing our country.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p>Email: <a href="mailto:twterriewalker@gmail.com">twterriewalker@gmail.com</a></p>
+          <p>Phone: <a href="tel:+265881053523">+265 881 053 523</a></p>
+          <p>Lilongwe, Malawi</p>
+        </div>
+        <div>
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#" >
+              <img src="facebook-icon.jpeg"></a>
+            <a href="#" >
+              <img src="instagram-icon.jpeg"></a>
+            <a href="https://wa.me/265996756511">
+              <img src="whatsapp-icon.jpeg"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tour Guide Malawi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

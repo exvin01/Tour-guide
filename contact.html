@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Tour Guide Malawi to book your personalized tour. Get a quote for Lake Malawi, national parks, and city tours.">
+  <title>Contact | Tour Guide Malawi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container nav-container">
+     <a href="index.html" class="logo">Terence <span>Walker</span><br>
+        <span>Tour </span> Guide</a>
+      <nav class="nav" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="destinations.html" class="nav-link">Destinations</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <div class="container animate-on-scroll">
+      <h1>Get In Touch</h1>
+      <p>Tell me about your trip. I’ll reply within 24 hours with a custom itinerary and quote.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Contact Form -->
+        <div class="contact-form animate-on-scroll">
+          <h3>Request a Tour</h3>
+          <form action="/contact" method="post" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+              <span class="error-msg"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+              <span class="error-msg"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="destination">Destination Interest</label>
+              <select id="destination" name="destination">
+                <option value="">Select a destination</option>
+                <option value="lake-malawi">Lake Malawi</option>
+                <option value="lilongwe">Lilongwe City Tour</option>
+                <option value="mulanje">Mount Mulanje</option>
+                <option value="liwawe">Liwawe Wildlife Reserve</option>
+                <option value="custom">Custom Tour</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required placeholder="Tell me your travel dates, group size, and interests"></textarea>
+              <span class="error-msg"></span>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-success" id="formSuccess"></p>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="contact-info animate-on-scroll">
+          <h3>Contact Details</h3>
+          <div class="info-item">
+            <strong>Email</strong>
+           <p>Email: <a href="mailto:twterriewalker@gmail.com">twterriewalker@gmail.com</a></p>
+
+          </div>
+          <div class="info-item">
+            <strong>Phone / WhatsApp</strong>
+          <p>Phone: <a href="tel:+265881053523">+265 881 053 523</a></p>
+          </div>
+          <div class="info-item">
+            <strong>Location</strong>
+            <p>Lilongwe, Malawi</p>
+          </div>
+          <div class="info-item">
+            <strong>Response Time</strong>
+            <p>Within 24 hours</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>Tour Guide</h3>
+          <p>Professional tour guide services across Malawi since 2018.</p>
+        </div>
+        <div>
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Contact</h3>
+          <p>Email: <a href="mailto:twterriewalker@gmail.com">twterriewalker@gmail.com</a></p>
+          <p>Phone: <a href="tel:+265881053523">+265 881 053 523</a></p>
+        </div>
+        <div>
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#" >
+              <img src="facebook-icon.jpeg"></a>
+            <a href="#" >
+              <img src="instagram-icon.jpeg"></a>
+            <a href="https://wa.me/265996756511">
+              <img src="whatsapp-icon.jpeg"></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Tour Guide Malawi. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
