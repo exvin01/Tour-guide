@@ -119,7 +119,12 @@ h3 { font-size: 1.5rem; }
   align-items: center;
   padding: 1rem 0;
 }
-
+.tour{
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
@@ -331,6 +336,19 @@ h3 { font-size: 1.5rem; }
 
 .carousel-btn:hover {
   background: #b88a5a;
+}
+.image div{
+  display: grid;
+  margin: 50px;
+  text-align: center;
+  justify-content: center;
+  height: auto;
+}
+.image div img{
+  height: 100%;
+  border-radius: 20px;
+  border: 2px double #b88a5a;
+
 }
 
 /* Map */
