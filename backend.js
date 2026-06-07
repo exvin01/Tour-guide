@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const { mongoClient} = require('mongodb');
 const app = express();
 
 //serve static filles first
@@ -9,12 +10,26 @@ app.use(express.static(__dirname));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-//routes
-//create transport
+//connect to database
+const uri = process.env.MONGODB_URI;
+let client;
+let db;
+
+async function connectDB() {
+  if (!db) {
+    client = new MongoClient(uri);
+    await client.connect();
+    db = client.db('tourguideDB'); // collection will be inside this DB
+    console.log('Connected to MongoDB');
+  }
+  return db;
+}
+
+//create nodemailer transport
 const nodemailer = require('nodemailer');
 const transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
+    host: process.env.HOST,
+    port: process.env.PORT,
     auth:{
         user: process.env.EMAIL_USER,
         pass: process.env.EMAIL_PASS,
@@ -25,8 +40,24 @@ const transporter = nodemailer.createTransport({
 app.post('/contact', async (req, res) =>{
     try {
         const {fullname, email, destination, description} = req.body;
+        //validate inputs
+         if (!fullname || !email ||!destination ||!description) {
+            return res.status(400).send('All fields required');
+        }
+//send message to database first
+     const database = await connectDB();
+        await database.collection('contacts').insertOne({
+            fullname,
+            email,
+            destination,
+            description,
+            createdAt: new Date(),
+            ip: req.headers['x-forwarded-for'] || req.socket.remoteAddress
+        });
+
+  //then save a copy to email server
         await transporter.sendMail({
-            from: process.env.EMAIL_USER,
+            from: `"Tour Operator web" <${process.env.EMAIL_USER}>`,
             to: process.env.EMAIL_USER,
             subject: 'NEW SUBMISSION FROM CONTACT PAGE',
             html: `
@@ -40,7 +71,7 @@ app.post('/contact', async (req, res) =>{
         });
         // auto reply to sender 
         await transporter.sendMail({
-            from: process.env.EMAIL_USER,
+            from: `"TOUR OPERATOR" <${process.env.EMAIL_USER}>`,
             to: email,
             subject: 'THANKS FOR CONTACTING TERENCE WALKER',
             html: `
