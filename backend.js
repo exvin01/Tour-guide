@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const { mongoClient} = require('mongodb');
+const { MongoClient } = require('mongodb');
 const app = express();
 
 //serve static filles first
